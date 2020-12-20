@@ -43,7 +43,7 @@ function draw() {
   background('#D6FFF6');
   push()
   if (window.innerWidth > window.innerHeight) {
-    translate(CRYSTAL_SIZE / 4, window.innerHeight / 2 - CRYSTAL_SIZE / 2 )
+    translate(window.innerHeight / 2 - CRYSTAL_SIZE / 2 , window.innerHeight / 2 - CRYSTAL_SIZE / 2 )
   } else {
     translate(window.innerWidth / 2 - CRYSTAL_SIZE / 2, window.innerHeight / 2 - CRYSTAL_SIZE / 2) 
   }
