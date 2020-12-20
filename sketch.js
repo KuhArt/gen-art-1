@@ -1,12 +1,12 @@
-const WIDTH = window.innerWidth * 0.7;
+const WIDTH = window.innerWidth;
 const HEIGHT = window.innerHeight
-const CRYSTAL_SIZE = Math.max(WIDTH, HEIGHT)/ 3.5
+const CRYSTAL_SIZE = Math.max(WIDTH * 0.7, HEIGHT)/ 3.5
 const SIDES = 6
 
 // layout
 const COLUMNS = 2
 const ROWS = 2
-const MARGIN_LEFT = (WIDTH - CRYSTAL_SIZE * COLUMNS) / 2
+const MARGIN_LEFT = CRYSTAL_SIZE * COLUMNS / 2
 const MARGIN_TOP = (HEIGHT - CRYSTAL_SIZE * ROWS) / 2
 const PADDING = CRYSTAL_SIZE * 0.3
 const GRIDBOX = CRYSTAL_SIZE + PADDING
@@ -34,7 +34,7 @@ function setup() {
 
   for (let x = 0; x < COLUMNS; x++) {
     for (let y = 0; y < ROWS; y++) {
-      const posX = CRYSTAL_SIZE / 4 + MARGIN_LEFT + (x * GRIDBOX)
+      const posX =   MARGIN_LEFT + (x * GRIDBOX)
       const posY = CRYSTAL_SIZE / 4 + MARGIN_TOP + (y * GRIDBOX)
       const crystal = makeCrystal({x: posX, y: posY})
       ALL_CRYSTALS.push(crystal)
