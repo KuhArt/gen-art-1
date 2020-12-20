@@ -97,7 +97,6 @@ const outlineShape = (state) => {
         state.animationScale = animationScaleIncrement * halfTime - (animationScaleIncrement * (animationStep - halfTime ));
       } 
       push()
-      console.log(1 + state.animationScale);
       
       scale(1 + state.animationScale, 1 + state.animationScale);
       stroke(state.layerColor)

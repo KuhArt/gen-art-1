@@ -15,8 +15,6 @@ ALL_CRYSTALS = []
 const dpr = window.devicePixelRatio;
 function setup() {
   frameRate(FRAMES_NUMBER)
-  console.log(START, GRIDBOX * COLUMNS);
-  
   const totalX = (START + GRIDBOX * COLUMNS) * dpr;
   const totalY = (START + GRIDBOX * ROWS) * dpr;
   createCanvas(window.innerWidth, window.innerHeight)
@@ -36,7 +34,6 @@ function setup() {
       const posX = START + (x * GRIDBOX)
       const posY = START + (y * GRIDBOX)
       const crystal = makeCrystal({x: posX, y: posY})
-      console.log(crystal)
       ALL_CRYSTALS.push(crystal)
     }
   }
@@ -48,7 +45,7 @@ function draw() {
   if (window.innerWidth > window.innerHeight) {
     translate(CRYSTAL_SIZE / 4, window.innerHeight / 2 - CRYSTAL_SIZE / 2 )
   } else {
-    translate(window.innerWidth / 2- CRYSTAL_SIZE / 2, 0) 
+    translate(window.innerWidth / 2 - CRYSTAL_SIZE / 2, window.innerHeight / 2 - CRYSTAL_SIZE / 2) 
   }
   ALL_CRYSTALS.forEach(crystal => {
     drawCrystal(crystal)

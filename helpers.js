@@ -22,8 +22,6 @@ const randomSelectTwo = () => {
 }
 
 const getRandomFromPalette = () => {
-  console.log(PALETTE, random(PALETTE));
-  
   return random(PALETTE)
 }
 
